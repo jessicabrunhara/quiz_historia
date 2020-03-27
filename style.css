@@ -1,23 +1,31 @@
 header {
-    text-align: center; /*alinhando */
+    text-align: center; /* alinhando */
 
 }
 
-.area_respostas { /*divs são display block, ou seja, por padrão, pegam a linha inteira, mas quando elas estão dentro de um container flex isso não acontece. */
-    display:flex:
+body {
+    background-color: rgb(255, 255, 235);
+}
+
+
+.area_respostas { /*divs são display block, ou seja, por padrão, pegam a linha inteira, masquando elas estão num dentro de um container flex isso não acontece. */
+    display: flex;
+    justify-content: center;
 
 
 }
 .caixa {
+    background-color: rgb(255, 237, 204);
     display: inline-block;
     width: 400px;
     height: 400px;
+    margin: 15px; 
     text-align: center; 
     border: 2px solid black; /*caixa*/
 
 }
 
-.resposta {   /*as class resposta tem em comum tamanho e importância */
+.resposta {   /*as class resposta tem em comum tamanho e  */
     font-size: 20px;
     font-weight: bold;
     

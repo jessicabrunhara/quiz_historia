@@ -35,10 +35,12 @@ if(selectedTest == 1) {
         firstAnswerElement.classList.add("incorreta");
         incorrectAnswers.appendChild(firstAnswerElement);
     }
-    //FIM DA PERGUNTA 1
+ 
+        //FIM DA PERGUNTA 1
 
 
     //INÍCIO DA PERGUNTA 2
+
     const secondAnswer = prompt("Quem é conhecido como o pai da alta costura \n 1- Valentino \n 2- Charles Frederick Worth \n 3- Christian Dior");
     
     const secondAnswerElement = document.createElement("div");
@@ -52,10 +54,9 @@ if(selectedTest == 1) {
         secondAnswerElement.classList.add("incorreta");
         incorrectAnswers.appendChild(secondAnswerElement);
     }
-    //FIM DA PERGUNTA 2
+//FIM DA PERGUNTA 2
 
-    
-    //INÍCIO DA PERGUNTA 3
+//INÍCIO DA PERGUNTA 3
     const thirdAnswer = prompt("Em qual década Chanel popularizou o uso de calças por mulheres? \n 1- 20 \n 2- 30 \n 3- 50");
     
     const thirdAnswerElement = document.createElement("div");
@@ -69,9 +70,8 @@ if(selectedTest == 1) {
         thirdAnswerElement.classList.add("incorreta");
         incorrectAnswers.appendChild(thirdAnswerElement);
     }
-    //FIM DA PERGUNTA 3
-    
-    if(firstAnswer== 1, secondAnswer==2, thirdAnswer== 1){
+
+    if(firstAnswer== '1' && secondAnswer== '2' && thirdAnswer== '1'){
         alert("Parabéns, você acertou todas!");
     }
 }
@@ -126,9 +126,9 @@ if(selectedTest == 2) {
         incorrectAnswers.appendChild(thirdAnswerElement);
      }
      
-    
-    if(firstAnswer == 2, secondAnswer == 3, thirdAnswer == 1){
-        alert=("Parabéns, você acertou todas!");
+
+    if(firstAnswer== '2' && secondAnswer== '3' && thirdAnswer== '1'){
+        alert("Parabéns, você acertou todas!");
     }
      
 }

@@ -3,15 +3,16 @@ const name = prompt("Olá, pessoa linda! Qual é o seu nome?");
 const nameElement = document.getElementById("nome");
 nameElement.innerHTML = name;
 
-const startTest = confirm("Quer começar a prova?");
+const startTest = prompt("Deseja iniciar a prova? \n 1- Sim \n 2- Não");
 
-if(!startTest) {
+
+if(startTest ==2) {
     alert("Você não iniciou o teste.");
     throw new Error('Encerrar o programa');
 }
 
 // Se a execução do código chegou até esta linha, significa que o usuário quis começar o teste
-const selectedTest = prompt("Qual prova você quer fazer? \n 1. História da moda \n 2. História da arte");
+const selectedTest = prompt("Qual prova você quer fazer? \n 1- História da moda \n 2- História da arte");
 
 
 // Selecione as caixas de respostas corretas e incorretas
@@ -34,13 +35,11 @@ if(selectedTest == 1) {
         firstAnswerElement.classList.add("incorreta");
         incorrectAnswers.appendChild(firstAnswerElement);
     }
- 
-        //FIM DA PERGUNTA 1
+    //FIM DA PERGUNTA 1
 
 
     //INÍCIO DA PERGUNTA 2
-
-    const secondAnswer = prompt("Quem é conhecido como o pai da alta costura \n 1- Valentino \n 2- Charles Frederick Worth \n 3-Christian Dior");
+    const secondAnswer = prompt("Quem é conhecido como o pai da alta costura \n 1- Valentino \n 2- Charles Frederick Worth \n 3- Christian Dior");
     
     const secondAnswerElement = document.createElement("div");
     secondAnswerElement.classList.add("resposta");
@@ -53,14 +52,15 @@ if(selectedTest == 1) {
         secondAnswerElement.classList.add("incorreta");
         incorrectAnswers.appendChild(secondAnswerElement);
     }
-//FIM DA PERGUNTA 2
+    //FIM DA PERGUNTA 2
 
-//INÍCIO DA PERGUNTA 3
+    
+    //INÍCIO DA PERGUNTA 3
     const thirdAnswer = prompt("Em qual década Chanel popularizou o uso de calças por mulheres? \n 1- 20 \n 2- 30 \n 3- 50");
     
     const thirdAnswerElement = document.createElement("div");
     thirdAnswerElement.classList.add("resposta");
-    thirdAnswerElement.innerHTML = "resposta 2";
+    thirdAnswerElement.innerHTML = "resposta 3";
     
     if(thirdAnswer == 1) {
         thirdAnswerElement.classList.add("correta");
@@ -68,6 +68,11 @@ if(selectedTest == 1) {
     }  else  {
         thirdAnswerElement.classList.add("incorreta");
         incorrectAnswers.appendChild(thirdAnswerElement);
+    }
+    //FIM DA PERGUNTA 3
+    
+    if(firstAnswer== 1, secondAnswer==2, thirdAnswer== 1){
+        alert("Parabéns, você acertou todas!");
     }
 }
 
@@ -77,13 +82,13 @@ if(selectedTest == 2) {
     // Início da Pergunta 1
     const firstAnswer = prompt("Em qual cidade o pintor Candido Portinari nasceu? \n 1- Palmares Paulista \n 2- Brodowski \n 3- Ouro Preto");
     
-    const firstAnswerElement = document.createElement('div');
+    const firstAnswerElement = document.createElement("div");
     firstAnswerElement.classList.add("resposta");
     firstAnswerElement.innerHTML = "resposta 1";
     
-    if(firstAnswer ==2) {
+    if(firstAnswer == 2) {
         firstAnswerElement.classList.add("correta");
-        correctAnswers.appendChild(firstAnswerELement);
+        correctAnswers.appendChild(firstAnswerElement);
     } else {
         firstAnswerElement.classList.add("incorreta");
         incorrectAnswers.appendChild(firstAnswerElement);
@@ -97,7 +102,7 @@ if(selectedTest == 2) {
      secondAnswerElement.classList.add("resposta");
      secondAnswerElement.innerHTML = "resposta 2";
 
-     if(secondAnswer ==3) {
+     if(secondAnswer == 3) {
         secondAnswerElement.classList.add("correta");
         correctAnswers.appendChild(secondAnswerElement);
      } else {
@@ -113,11 +118,17 @@ if(selectedTest == 2) {
      thirdAnswerElement.classList.add("resposta");
      thirdAnswerElement.innerHTML = "resposta 3";
 
-     if(thirdAnswer ==1) {
+     if(thirdAnswer == 1) {
         thirdAnswerElement.classList.add("correta");
         correctAnswers.appendChild(thirdAnswerElement);
      } else { 
         thirdAnswerElement.classList.add("incorreta");
         incorrectAnswers.appendChild(thirdAnswerElement);
      }
+     
+    
+    if(firstAnswer == 2, secondAnswer == 3, thirdAnswer == 1){
+        alert=("Parabéns, você acertou todas!");
+    }
+     
 }
